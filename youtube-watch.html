@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Watch Clone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/recommend-section.css">
+    <link rel="stylesheet" href="styles/comment.css">
+
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <img class="hamburger-menu" src="icons/hamburger-menu.svg">
+        <a class="youtube-logo-container" href="../youtube-clone/youtube.html" target="_blank" class="video-title-link">
+          <img class="youtube-logo" src="icons/youtube-logo.svg">
+        </a>
+
+      </div>
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="icons/search.svg">
+          <div class="tooltip">Search</div>
+        </button>
+        <!-- Put position absolute inside position relative -->
+        <button class="voice-search-button">
+          <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+          <div class="tooltip">Search with your voice</div>
+        </button>
+      </div>
+      <div class="right-section">
+        <div class="upload-icon-container">
+          <img class="upload-icon" src="icons/upload.svg">
+          <div class="tooltip">Create</div>
+        </div>
+        <div class="youtube-apps-icon-container">
+          <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
+          <div class="tooltip">YouTube apps</div>
+        </div>
+        <div class="notifications-icon-container">
+          <img class="notifications-icon" src="icons/notifications.svg">
+          <div class="tooltip">Notifications</div>
+          <div class="notifications-count">3</div>
+        </div>
+        <img class="current-user-picture" src="channel-pictures/my-channel.jpg">
+      </div>
+    </header>
+
+    <main>
+      <div class="small">
+        <!--********************-->
+        <!--Video Display Window-->
+        <!--********************-->
+        <div class="video-display">
+          <div class="video-window">
+            <img class="video-playing" src="thumbnails/thumbnail-8.webp">
+            <div class="video-window-function-container">
+              <div class="video-window-play-container">
+                <input type="range" min="1" max="200" value="1" class="video-window-play">
+              </div>
+              <div class="video-window-play-button">
+                <div class="video-window-play-left">
+                  <div class="play-button-container">
+                    <img class="video-play-button" src="icons/play.png">
+                  </div>
+                  <div class="play-button-container">
+                    <img class="video-next-button" src="icons/next.png">
+                  </div>
+                  <div class="sound-button-container">
+                    <img class="video-sound-button" src="icons/sound.png">
+                    <div class="volume-sider-container">
+                      <input type="range" min="1" max="50" value="25" class="volume-sider">
+                    </div>
+                    <!-- <div class="video-playing-position"></div>
+                    <div class="video-playing1-position"></div>
+                    <div class="video-red-position"></div> -->
+                  </div>
+                  <div class="time">0:0.2 / 26:27</div>
+                </div>
+                <div class="video-window-play-right">
+                  <div class="play-button-container">
+                    <img class="video-next-button" src="icons/cc.png">
+                  </div>
+                  <div class="play-button-container">
+                    <img class="video-next-button" src="icons/setting.png">
+                  </div>
+                  <div class="play-button-container">
+                    <img class="video-next-button" src="icons/full screen.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-title">
+            [SUB]A rainy day🌧️ Grand valley with no one / Summer camp in Korea
+          </div>
+
+          <div class="video-function">
+            <div class="left-function">
+              <img class="profile-picture" src="channel-pictures/channel-8.jpg">
+              <div class="channel">
+                <div class="channel-name">
+                  반반한캠핑 Bancamp
+                </div>
+                <div class="channel-sub">
+                  89.2K subscribers
+                </div>
+              </div>
+              <button class="subscriber-button">Subscribe</button>
+            </div>
+
+            <div class="right-function">
+              <div class="like-hate">
+                <button class="like-button">
+                  <img class="button-img" src="icons/like.png">
+                  2.6K</button>
+                <button class="hate-button">
+                  <img class="button-img" src="icons/hate.png">
+                </button>
+                <div class="border"></div>
+              </div>
+              <button class="share-button">
+                <img class="button-img" src="icons/share.png">Share</button>
+              <button class="save-button">
+                  <img class="button-img" src="icons/save.png">Save</button>
+              <button class="more-button">
+                <img class="more-button-img" src="icons/3dots.png">
+              </button>
+            </div>
+          </div>
+
+          <div class="video-discription">
+            <div class="video-stats">
+              205K views  12 days ago
+            </div>
+            <div>
+              <p class="discription">
+                *본 영상은 보노스프의 유료광고를 포함하고 있습니다.
+                <br><br>
+                🏷️ 보노스프 공식계정
+              </p>
+            <div class="show-more">Show more</div>
+            </div>
+          </div>
+        </div>
+
+        <!--*********************-->
+        <!--Recommendation Videos-->
+        <!--*********************-->
+        <div class="video-recommend">
+          <!--First suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=XwK2nXEyt8U" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-1.webp">
+              </a>
+              <div class="video-time">28:48</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=XwK2nXEyt8U" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  가을캠핑의 성지가 될 곳에서 하룻 밤ㅣ죄송하고 감사합니다. 앞으로 캠핑은..
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@banbancamping" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  반반한캠핑 Bancamp
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                33K views &#183; 7 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Second suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=dEWi0ElKQvU" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-2.webp">
+              </a>
+              <div class="video-time">24:38</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=dEWi0ElKQvU" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  the gentle sound of waves throughout the day🌊.360° Overwhelming Opennes Panamarra View Tent Camping
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@banbancamping" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  반반한캠핑 Bancamp
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                222K views &#183; 2 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Third suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=j_7fELGCCgE" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-3.webp">
+              </a>
+              <div class="video-time">16:01</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=j_7fELGCCgE" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  Morning Routine of diligent homemakerㅣCleaning & Tidying upㅣCooking at homeㅣVlog
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@hamimommy" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  하미마미 Hamimommy
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                1.1M views &#183; 1 month ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Fourth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=aa_Ppj5G3_0" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-4.webp">
+              </a>
+              <div class="video-time">23:21</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=aa_Ppj5G3_0" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  3 days holidays and dinner after work|Korean cooking VLOG
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@-o-hari5843" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  오-하리 O-Hari
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                285K views &#183; 2 weeks ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Fifth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=lDbwjtUIz74" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-5.webp">
+              </a>
+              <div class="video-time">15:26</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=lDbwjtUIz74" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  cafe vlog | 🍫🍓초코가 좋아? 딸기가 좋아?🍫🍓 | 카페 브이로그 | asmr | 개인카페 | 음료제조
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@park_bari" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  박바리 Park Bari
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                2.4M views &#183; 3 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Sixth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=Mm0Wt1PyPsQ" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-6.webp">
+              </a>
+              <div class="video-time">21:54</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=Mm0Wt1PyPsQ" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  Building my own villa.long-term camping with dog and love friend.tent with a warm wood stove
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@banbancamping" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  반반한캠핑 Bancamp
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                57K views &#183; 4 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Seventh suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=0gNY0KZ2nyY" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-7.webp">
+              </a>
+              <div class="video-time">17:23</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=0gNY0KZ2nyY" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  You wouldn't expect that today's video is called "The Life of Potato"! 你们都没想到这期的视频会叫“土豆的一生”吧！|Liziqi
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@cnliziqi" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  李子柒 Liziqi
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                44M views &#183; 3 years ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Eighth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=NzfPCaRdv7s" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-10.webp">
+              </a>
+              <div class="video-time">29:44</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=NzfPCaRdv7s" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  This is how you do emotional car camping! / Rain Camping 🌧️ / Polaris Delphinus / Camping V-log
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@a_neuk_camping" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  Aneuk Camping (Cozy Camping)
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                42K views &#183; 1 month ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Nineth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=zWHl1-dQzJA" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-8.webp">
+              </a>
+              <div class="video-time">34:11</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=zWHl1-dQzJA" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  Mysterious forest. No one is here. Eating whole lamb ribs by making a fire in front of valley
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@likeyoung" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  조화영 조아용 JOA
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                178K views &#183; 3 weeks ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Tenth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=y0wXQ5EdW_0" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-9.webp">
+              </a>
+              <div class="video-time">32:41</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=y0wXQ5EdW_0" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  Relaxing SOLO Camping with Rain Forest Mountain views [ gloomy weather, cosy shelter, rain ASMR ]
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@go4x4media" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  Go4x4
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                4.9M views &#183; 4 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Button Show more-->
+          <button class="show-more-videos">Show more</button>
+        </div>
+
+        <!--***************-->
+        <!--Comment Section-->
+        <!--***************-->
+        <div class="comment-section">
+
+          <div class="comment-summary">
+            <div class="comment-count">194 Comments</div>
+            <div class="comment-sort">
+              <img class="comment-sort-button" src="icons/Sort-03.png">
+            Sort by</div>
+          </div>
+
+          <div class="comment-adding">
+            <div class="profile-picture-container">
+              <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+            </div>
+            <div class="add-comment-container">
+              <input class="add-comment" type="text" placeholder="Add a comment...">
+              <div class="add-comment-function">
+                <button class="emotion-button">
+                  <img class="emotion-image" src="icons/Face.png">
+                </button>
+                <div>
+                  <button class="cancel-button">Cancel</button>
+                  <button class="add-comment-button">Comment</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="comments-total">
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@lilyphua1139</span> 12 days ago
+                </p>
+                <p class="comment-content">
+                  Perfect place for camping, nice and cozy
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@user-pj8zi1gz8f</span> 11 days ago
+                </p>
+                <p class="comment-content">
+                  매번 영상으로 잘보고있습니당>< 우중캠핑 피칭할때 비많이오면 현타오는데 항상 즐겁게 캠핑하는 모습이 너무 좋아보여용><오늘도 힐링영상 너무 감사합니당><❤️
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@tonycarver9570</span> 6 days ago
+                </p>
+                <p class="comment-content">
+                  What a beautiful place to camp.
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@hyunimhwang8889</span> 12 days ago
+                </p>
+                <p class="comment-content">
+                  와 계곡너무 시원해보여요
+                  <br>
+                  오늘도 잘봤습니다 ❤️
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@brasil1604</span> 3 days ago
+                </p>
+                <p class="comment-content">
+                  Wow…Wonderful place❤️❤️❤️
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@Camping_with_haengbok</span> 12 days ago
+                </p>
+                <p class="comment-content">
+                  시원한계곡 나무그늘 여름에 최고 장소를 찾으셨네요👍👍 빗소리와 계곡 물소리 넘 좋네요~ 오늘도 영상 즐겁게 잘 봤습니당🎶🎵💞💕
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@gigimanahan2227</span> 2 days ago
+                </p>
+                <p class="comment-content">
+                  Nice place, very relaxing,
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@UraNiUmXXpLoSiVez</span> 12 days ago
+                </p>
+                <p class="comment-content">
+                  I do like the sound of the rain it's relaxing, it still looked like a fun trip
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@dugit19</span> 6 days ago
+                </p>
+                <p class="comment-content">
+                  지금 시즌에 너무 좋은 피칭모드네요~👍🏻👍🏻
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="channel-pictures/my-channel.jpg">
+              </div>
+              <div class="comment-container">
+                <p class="comment-name">
+                  <span class="Id-name">@user-ft4jw9vp9j</span> 9 days ago
+                </p>
+                <p class="comment-content">
+                  으앙~두분언제봐도 부러워요~반캠님은 능력자 소현님은 언제나 스타일쉬하고 두분너무잘어울려요 오늘도 멋진텐트도 잘구경하고 동화속 같은캠핑 잘보고 힐링합니다~🥰
+                </p>
+                <div class="comment-button">
+                  <button class="comment-like-button">
+                    <img class="comment-button-img" src="icons/like.png">
+                  </button>
+                  <button class="comment-hate-button">
+                    <img class="comment-button-img" src="icons/hate.png">
+                  </button>
+                  <button class="reply-button">Reply</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="large">
+        <!--*********************-->
+        <!--Recommendation Videos-->
+        <!--*********************-->
+        <div class="video-recommend">
+          <!--First suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=XwK2nXEyt8U" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-1.webp">
+              </a>
+              <div class="video-time">28:48</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=XwK2nXEyt8U" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  가을캠핑의 성지가 될 곳에서 하룻 밤ㅣ죄송하고 감사합니다. 앞으로 캠핑은..
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@banbancamping" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  반반한캠핑 Bancamp
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                33K views &#183; 7 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Second suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=dEWi0ElKQvU" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-2.webp">
+              </a>
+              <div class="video-time">24:38</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=dEWi0ElKQvU" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  the gentle sound of waves throughout the day🌊.360° Overwhelming Opennes Panamarra View Tent Camping
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@banbancamping" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  반반한캠핑 Bancamp
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                222K views &#183; 2 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Third suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=j_7fELGCCgE" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-3.webp">
+              </a>
+              <div class="video-time">16:01</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=j_7fELGCCgE" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  Morning Routine of diligent homemakerㅣCleaning & Tidying upㅣCooking at homeㅣVlog
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@hamimommy" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  하미마미 Hamimommy
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                1.1M views &#183; 1 month ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Fourth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=aa_Ppj5G3_0" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-4.webp">
+              </a>
+              <div class="video-time">23:21</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=aa_Ppj5G3_0" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  3 days holidays and dinner after work|Korean cooking VLOG
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@-o-hari5843" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  오-하리 O-Hari
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                285K views &#183; 2 weeks ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Fifth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=lDbwjtUIz74" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-5.webp">
+              </a>
+              <div class="video-time">15:26</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=lDbwjtUIz74" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  cafe vlog | 🍫🍓초코가 좋아? 딸기가 좋아?🍫🍓 | 카페 브이로그 | asmr | 개인카페 | 음료제조
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@park_bari" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  박바리 Park Bari
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                2.4M views &#183; 3 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Sixth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=Mm0Wt1PyPsQ" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-6.webp">
+              </a>
+              <div class="video-time">21:54</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=Mm0Wt1PyPsQ" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  Building my own villa.long-term camping with dog and love friend.tent with a warm wood stove
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@banbancamping" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  반반한캠핑 Bancamp
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                57K views &#183; 4 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Seventh suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=0gNY0KZ2nyY" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-7.webp">
+              </a>
+              <div class="video-time">17:23</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=0gNY0KZ2nyY" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  You wouldn't expect that today's video is called "The Life of Potato"! 你们都没想到这期的视频会叫“土豆的一生”吧！|Liziqi
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@cnliziqi" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  李子柒 Liziqi
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                44M views &#183; 3 years ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Eighth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=NzfPCaRdv7s" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-10.webp">
+              </a>
+              <div class="video-time">29:44</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=NzfPCaRdv7s" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  This is how you do emotional car camping! / Rain Camping 🌧️ / Polaris Delphinus / Camping V-log
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@a_neuk_camping" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  Aneuk Camping (Cozy Camping)
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                42K views &#183; 1 month ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Nineth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=zWHl1-dQzJA" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-8.webp">
+              </a>
+              <div class="video-time">34:11</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=zWHl1-dQzJA" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  Mysterious forest. No one is here. Eating whole lamb ribs by making a fire in front of valley
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@likeyoung" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  조화영 조아용 JOA
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                178K views &#183; 3 weeks ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Tenth suggestion-->
+          <div class="video-suggestion">
+            <div class="video-thumbnails">
+              <a href="https://www.youtube.com/watch?v=y0wXQ5EdW_0" target="_blank">
+                <img class="video-thumbnails-img" src="recommend_thumbnails/thumbnails-9.webp">
+              </a>
+              <div class="video-time">32:41</div>
+            </div>
+            <div class="video-suggestion-info">
+              <a href="https://www.youtube.com/watch?v=y0wXQ5EdW_0" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-title">
+                  Relaxing SOLO Camping with Rain Forest Mountain views [ gloomy weather, cosy shelter, rain ASMR ]
+                </p>
+              </a>
+              <a href="https://www.youtube.com/@go4x4media" target="_blank" class="video-suggestion-title-link">
+                <p class="video-suggestion-author">
+                  Go4x4
+                </p>
+              </a>
+              <p class="video-suggestion-stats">
+                4.9M views &#183; 4 months ago
+              </p>
+            </div>
+            <div class="video-suggestion-tooltip">
+              <div class="video-tooltip">
+                <img class="watch-later" src="icons/watch-later.png">
+              </div>
+              <div class="video-tooltip">
+                <img class="add-playlist" src="icons/add-playlist1.png">
+              </div>
+            </div>
+            <div class="video-more-tooltip">
+              <img class="dots3" src="icons/dots3.png">
+            </div>
+          </div>
+
+          <!--Button Show more-->
+          <button class="show-more-videos">Show more</button>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>

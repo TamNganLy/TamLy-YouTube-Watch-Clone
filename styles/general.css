@@ -1,0 +1,31 @@
+body {
+  font-family: Roboto, Arial;
+  padding: 70px 20px 50px 20px;
+}
+
+@media (min-width: 1000px) {
+  main {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .small {
+    flex: 1;
+    margin-right: 25px;
+  }
+  
+  .small .video-recommend {
+    display:none;
+  }
+
+  .large {
+    width: 400px;
+  }
+}
+
+@media (max-width: 999px) {
+  .large {
+    display: none;
+  }
+}
